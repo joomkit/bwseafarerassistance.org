@@ -1,0 +1,98 @@
+{% extends "_layouts/home.twig" %}
+
+{#{% set firstGroup = currentUser.getGroups()[0] ?? null %}#}
+
+{#{% if firstGroup is not null %}#}
+{#{% set tmplRedirect = alias('@web')~'/'~firstGroup.handle~"/lander" %}#}
+{#  #}{#    {{firstGroup}}#}
+{#  {% redirect tmplRedirect %}#}
+{#{% endif %}#}
+
+{% block content %}
+
+
+
+
+<!-- Page Content -->
+{#  <div class="bg-info position-absolut home-lang d-flex justify-content-center pb-2">#}
+
+{#    {% if currentSite.group.sites | length > 1 %}#}
+
+{#      <div class="btn-group">#}
+{#        <button type="button" class="lng btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#          <i class="fa fa-language" aria-hidden="true"></i> Language</a>#}
+{#        </button>#}
+{#        <div class="dropdown-menu">#}
+{#          {% for site in currentSite.group.sites %}#}
+
+{#            {% set url = alias(site.baseUrl) %}#}
+{#            {% if entry is defined %}#}
+{#              {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}#}
+{#              {% if entryForOtherSite %}#}
+{#                {% set url = entryForOtherSite.getUrl() %}#}
+{#              {% endif %}#}
+{#            {% endif %}#}
+{#            <a  class="dropdown-item  {% if currentSite.id == site.id %} is-active{% endif %}" href="{{ url }}">{{ site.handle }}</a>#}
+
+{#          {% endfor %}#}
+{#        </div>#}
+{#      </div>#}
+{#    {% endif %}#}
+
+{#  </div>#}
+
+  {% if entry.bannerImage %}
+      {% set asset = entry.bannerImage.one() %}
+  {% endif %}
+  <div class=" d-flex align-items-center  " style="background-image: url('{{ asset.url }}');min-height:500px">
+<div class="overlay"></div>
+    <div class="container-fluid p-5">
+      <div class="row section-bg mb-4" >
+        <div class="mx-auto text-center col-md-6">
+
+          <h1 class=" text-white mb-3">{{entry.strapline1}}</h1>
+          <h2 class=" text-white">{{entry.strapline2}}</h2>
+
+          <div class="text-white">{{- entry.introText -}}</div>
+        </div>
+      </div>
+      <div class="row d-flex">
+      </div>
+      <!--
+      <div class="py-3 d-fl justify-content-center align-items-center bg-info"-->
+    </div>
+  </div>
+  <div class="hide py-5 resource">
+  <div class="overlay h-100 w-100"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center mb-3"><h3 class="bg-blue-dark">Access resources</h3></div>
+        <div class="col-md-6 d-flex justify-content-center">
+
+          <div class="card w-75" >
+
+            <div class="card-body">
+              <h5 class="card-title">Resources</h5>
+              <p class="card-text">Download self-help guides and other useful resources.</p>
+              <span  class="btn btn-primary">Download <i class="fa fa-cloud-download" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+
+          <div class="card w-75" >
+            <img src="{{ baseUrl }}/assets/images/video-tel-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Live chat</h5>
+              <p class="card-text">Confidential emotional support service for seafarers. 24 hours a day.</p>
+              <span class="btn btn-primary">Chat <i class="fa fa-comments" aria-hidden="true"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+<!-- / page content -->
+
+{% endblock %}
