@@ -48,12 +48,20 @@
 <div class="overlay"></div>
     <div class="container-fluid p-5">
       <div class="row section-bg mb-4" >
-        <div class="mx-auto text-center col-md-6">
+        <div class="mx-auto text-center col-md-8">
 
           <h1 class=" text-white mb-3">{{entry.strapline1}}</h1>
           <h2 class=" text-white">{{entry.strapline2}}</h2>
 
           <div class="text-white">{{- entry.introText -}}</div>
+          {%  if entry.ctaLink | length %}
+          {% set link = entry.ctaLink.one.url %}
+          {% elseif entry.custom | length %}
+          {% set link = entry.custom %}
+          {% endif %}
+          <div class="cta">
+            <a class="btn btn-outline rounded" href="{{ link }}">{{ entry.ctaButtonText }}</a>
+          </div>
         </div>
       </div>
       <div class="row d-flex">

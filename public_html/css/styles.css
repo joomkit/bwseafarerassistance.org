@@ -10069,10 +10069,14 @@ img.chat:hover {
 .dropdown-menu.show .nav-link:hover {
   color: #ffffff; }
 
+.direct-email, .direct-dial {
+  color: #ffffff; }
+
 @media (min-width: 0px) {
   .navend a, .navend span {
-    color: #ffffff;
     font-size: 1.2rem; }
+  .navend a {
+    color: #ffc107; }
   .navbar-brand {
     padding: 0;
     max-width: 230px; }
@@ -10131,9 +10135,11 @@ img.chat:hover {
     color: #ffffff; } }
 
 @media (min-width: 990px) {
-  .navend a, .navend span {
+  .navend span {
     color: #ffffff;
-    font-size: 0.8rem; } }
+    font-size: 0.8rem; }
+  .navend a {
+    font-size: 1rem; } }
 
 @media (min-width: 1200px) {
   .navbar-nav .list-group-item a.nav-link {

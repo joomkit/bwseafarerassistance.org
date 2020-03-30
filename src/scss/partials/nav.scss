@@ -98,6 +98,9 @@ img.chat:hover {
 .dropdown-menu.show .nav-link:hover{
   color:$white;
 }
+.direct-email, .direct-dial{
+  color:$white;
+}
 
 //direct cta end
 .navend{
@@ -109,10 +112,12 @@ img.chat:hover {
 }
 @media (min-width: 0px) {
   .navend a,.navend span{
-    color:$white;
+
     font-size:1.2rem
   }
-
+  .navend a{
+    color:$yellow;
+  }
   .navbar-brand{
     padding:0;
     max-width: 230px;
@@ -221,9 +226,12 @@ img.chat:hover {
 
 }
 @media (min-width:990px){
-  .navend a,.navend span{
+  .navend span{
     color:$white;
     font-size:0.8rem
+  }
+  .navend a{
+    font-size:1rem
   }
 }
 @media (min-width: 1200px) {

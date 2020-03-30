@@ -20,7 +20,9 @@
         </div>
     </div>
     {% set handlebars = baseUrl  ~ '/js/handlebars.js' %}
-    {% includeJsFile handlebars %}
+{#    {% includeJsFile handlebars %}#}
+    {% do view.registerJsFile(handlebars) %}
+
 
     {% include 'ship/_includes/js-vars.twig'  %}
 

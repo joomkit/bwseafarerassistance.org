@@ -40,7 +40,8 @@
     </div>
 
     {% set handlebars = baseUrl  ~ '/js/handlebars.js' %}
-    {% includeJsFile handlebars %}
+{#    {% includeJsFile handlebars %}#}
+    {% do view.registerJsFile(handlebars) %}
 
     {% include 'ship/_includes/js-vars.twig' %}
     {# pass last segment as slug to api - to keep pretty urls #}
@@ -52,7 +53,8 @@
     {#{%  endset %}#}
     {#{% includeJs myJs %}#}
 
-    {% includeJsFile baseUrl ~ '/js/ship/item.js' %}
+{#    {% includeJsFile  %}#}
+    {% do view.registerJsFile(baseUrl ~ '/js/ship/item.js') %}
 {#    {% includeJsFile baseUrl ~ '/js/ship/langnav.js' %}#}
     {# show the api generated language block #}
     {% set myCss %}
