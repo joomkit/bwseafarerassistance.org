@@ -49,19 +49,19 @@
 
 <div class="navigation bg-secondary">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-3 static-top">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 ">
         <div class="container">
-            <a class="navbar-brand" href="{{ baseUrl }}">
-                <img class="img-fluid" src="{{baseUrl}}/assets/images/slogo.png" alt="">
+            <a class="navbar-brand py-0 py-md-3" href="{{ baseUrl }}">
+                <img class="img-fluid" src="{{baseUrl}}/assets/images/slogo.svg" alt="">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 {#            <div class="collapse navbar-collapse" id="navbarResponsive">#}
 {#                <ul class="navbar-nav ml-auto">#}
-            <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+            <div class="collapse navbar-collapse text-center justify-content-end" id="navbarResponsive">
 
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav top mx-auto">
                         {% set topNavPages = craft.entries.section('topNav').hidePage('0').all()  %}
 
                         {% for entry in topNavPages %}
@@ -131,6 +131,21 @@
                             {% endif %}
                         {%  endfor %}
                     </ul>
+
+                <div class=" navend">
+                    <div class="d-flex justify-content-end  flex-column text-right col-12">
+                        <div class="text-center text-lg-right">
+                            <span class="direct-dial">direct dial:</span> <a href="tel: {{ organisationDetails.organisationTelephone }}">{{ organisationDetails.organisationTelephone }}</a>
+                        </div>
+
+                        <div class="text-center text-lg-right ">
+                            <span class="direct-email">email:</span> <a href="mailto:{{ organisationDetails.organisationEmail }}">{{ organisationDetails.organisationEmail }}</a>
+
+                        </div>
+
+
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -204,6 +219,7 @@
                 {% elseif entry.level == 1 and not entry.hasDescendants() %}
 
                     {% set link = "" %}
+                    {% set order = " order-2 " %}
                     {% if entry.title |lower == 'email' %}
                         {% set link = "mailto:" ~ navlink %}
 
@@ -211,7 +227,8 @@
                         {% set link = entry.customLink %}
                         {#                                    {%  set onclick = "onclick=" ~ clickstring ~ "return:false;" %}#}
 
-                        {% set popclass = "popup" %}
+                        {% set popclass = "popup " %}
+                        {% set order = " order-1 " %}
                         {% set script = "$('.popup').click(function() {
                                                 console.log('pop');
                                                     var newwindow = window.open($(this).prop('href'), '',
@@ -227,8 +244,10 @@
                         {% set link = navlink %}
                     {% endif %}
 
-                    <li class="py-3 px-5 bg-primary list-group-item nav-item {{ macros.activeLinkClass(navlink, entry.level)|trim }} level{{ entry.level }} {{ entry.title |lower  }}">
+                    <li class="{{ entry.title |lower  }} {{ order }} py-3 px-sm-3 px-lg-5 px-xl-5   bg-primary list-group-item nav-item {{ macros.activeLinkClass(navlink, entry.level)|trim }} level{{ entry.level }} {{ entry.title |lower  }}">
+                        <a id="{{ entry.title|lower }}" href="{{ link }}" {{ onclick }} class="p-0 {{ popclass }} nav-link {{ macros.activeLinkClass(navlink, entry.level) |trim }} level{{ entry.level }}">
                         <img class="nav-icon {{ entry.title |lower  }}" src = "{{ baseUrl }}/icons/{{ entry.title |lower  }}.svg" >
+                        </a>
                        <a id="{{ entry.title|lower }}" href="{{ link }}" {{ onclick }} class="p-0 {{ popclass }} nav-link {{ macros.activeLinkClass(navlink, entry.level) |trim }} level{{ entry.level }}">
 
                             {{ entry.title }}</a>
@@ -236,6 +255,7 @@
                 {% endif %}
             {%  endfor %}
         </ul>
+
         </div>
     </nav>
 

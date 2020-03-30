@@ -14,7 +14,7 @@
 # Craft 3 CMS project root directory
 /public_html/.htaccess
 
-
+*.sketch
 # CRAFT ENVIRONMENT
 .env.php
 *.env.sh
@@ -47,7 +47,7 @@ public_html/oldimages/*
 # BUILD FILES
 /source
 /iswanchop
-
+/sql
 # MISC FILES
 .cache
 .DS_Store

@@ -1,7 +1,7 @@
-{% set entry = craft.entries.id(600).first() %}
+{% set entry = craft.entries.id(600).one() %}
                 {% if entry is defined %}
                     {# set up menu root and sub nav variables #}
-                    {% set landing = entry.getAncestors().level(1).first() %}
+                    {% set landing = entry.getAncestors().level(1).one() %}
 
                     {% switch landing %}
 
@@ -35,7 +35,7 @@
 
 
     <ul class="list-unstyled">
-        {% for entry in entries %}
+        {% for entry in entries.all() %}
 
 {#            {% if entry.level > 1 %}#}
 
@@ -45,7 +45,7 @@
 {#                </li>#}
                 {%  set seggy = "resources" | t %}
 
-                {% set lastSeg = craft.request.lastSegment %}
+                {% set lastSeg = craft.app.request.segments|last %}
 
                 {% if entry.slug == seggy or entry.slug in lastSeg %}
 
