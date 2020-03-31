@@ -2,7 +2,7 @@
 {%  set shipRoot = 'health-well-being/seafarers-health-resources' %}
 {%  set shipRootUrl = "resources" | t %}
 
-{% set myJs %}
+{% js %}
 	var baseNavLink = 'https://' + window.location.hostname;
 	var shipRootUrl = '{{ shipRootUrl }}';
 	var lastSegment = '{{craft.app.request.segments|last}}';
@@ -16,6 +16,6 @@
 	var locale = '{{'en'}}';
 	console.log(shipRootUrl);
 	console.log(baseNavLink);
-{%  endset %}
-{% includeJs myJs first %}
+{%  endjs %}
+
 

@@ -6,13 +6,12 @@
         <div class="container">
             <div class="row ">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <h1 class="page-heading">Resources</h1>
+                    <h1 class="page-heading">{{ "Seafarers' health resources"|t }}</h1>
 
                 </div>
 
             </div>
         </div>
-
     </section>
     <!--  ship entry.twig -->
     <div class="container site page pt-5">
@@ -20,7 +19,7 @@
             <div class="col-md-8 col-md-offset-0 col-lg-8 main">
 
                 <article>
-                    <h1>{{ "Seafarers' health resources"|t }}</h1>
+
                     <h3 class="sub-heading"></h3>
                     <!-- mustache cats -->
                     <div class=" row">
@@ -57,7 +56,7 @@
     {% do view.registerJsFile(baseUrl ~ '/js/ship/item.js') %}
 {#    {% includeJsFile baseUrl ~ '/js/ship/langnav.js' %}#}
     {# show the api generated language block #}
-    {% set myCss %}
+    {% set css %}
         .lang.dropdown-menu,
         .dt-lang-up-arrow{
             dispay:none;
@@ -71,5 +70,5 @@
         .lang-sel .shipLangNav {
             display: block!important;
         }
-    {% endset %}
+    {% endcss %}
 {% endblock %}

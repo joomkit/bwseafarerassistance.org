@@ -9,7 +9,7 @@
 $brand-blue: darken(#213485,5%); //#213485    #002A40;  //#28255f;//#1d1f5c // 1D205A //053165 /// 1D250B  //221F72  //NB*** #002A40 is original INVISION jason // purple/blue logo = 28255f
 $brand-yellow: #ffc44e;
 $brand-light-blue: #0770b1;
-$brand-dark-blue: #262171;
+$brand-dark-blue: #0f0064;//#262171;
 /////////////////////////////////
   //    Theme Primary Colors
 //////////////////////////////////
@@ -29,21 +29,21 @@ $cyan:    #17a2b8 !default;
 
 $sea-green: #30435a !default;
 
-$theme-colors: (
-  primary: #3F4276,
-  secondary: #0280AE,
-  light: #CC402D,
-  dark: #555555,
-  info: #4184D1,
-  success: #28a745,
-  warning: #ffc107,
-  danger: #dc3545,
-  white: #ffffff
-);
+//$theme-colors: (
+//  primary: #3F4276,
+//  secondary: #0280AE,
+//  light: #CC402D,
+//  dark: #555555,
+//  info: #4184D1,
+//  success: #28a745,
+//  warning: #ffc107,
+//  danger: #dc3545,
+//  white: #ffffff
+//);
 
 $theme-colors: (
-        primary: #3197bd, //196f97,
-        secondary: #087cb0,
+        primary: rgb(5,90,115),//#3197bd, //196f97,
+        secondary: #0f0064, // rgb(15,0,100),//#087cb0,
         light: #fefefe,
         dark: #555555,
         info: #4184D1,
@@ -64,7 +64,7 @@ $white: #ffffff;
 //$blue: #0B9DD7;
 $body-color: #404041;
 $primary: $yellow;
-$gray-light: #adb5bd !default;
+$gray-light: rgb(213,213,213); //#adb5bd !default;
 $gray-ex-light: #f8f9fa;
 $bg-blue-light:#B7EBFF;
 
@@ -167,6 +167,14 @@ $heading-letter-spacing:  0px !default;
 /* nav */
 
 $nav-link-padding: 0.5rem;
+$chat-bg-color: transparent; //#00b0eb!important;
+
+/* page */
+
+$section-page-link:#000000;
+
+/*ship*/
+$ship-bg-thumb: rgba(213, 235, 219, 0.16);  ////#f0f8ff;
 
 /*========= button =============*/
 ////buttons

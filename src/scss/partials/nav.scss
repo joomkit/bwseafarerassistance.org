@@ -11,7 +11,7 @@
 }
 
 .navigation.bg-secondary{
-  background: linear-gradient(to top, #087cb0 0%, #196f97 100%);
+  //background: linear-gradient(to top, #087cb0 0%, #196f97 100%);
 }
 .navigation.bg-secondary nav{
   //height:150px;
@@ -162,7 +162,7 @@ img.chat:hover {
     margin-top: -8px;
   }
   .navbar-nav .list-group-item.chat{
-    background-color: #00b0eb!important;
+    background-color: $chat-bg-color;
   }
   //end
 }
