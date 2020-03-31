@@ -1,11 +1,13 @@
 {% set image = block.image.one() %}
 {%  set position = block.position %}
+{%  set height = image.getHeight() %}
 {% css %}
-.float-right{margin:1rem 0 1rem 1rem!important}
+.float-right{margin:1rem 0 1rem 1rem!important;min-height: {{ height}}px }
 .float-left{margin:0.6rem 2rem 0rem 0!important}
 {% endcss %}
 {% if image %}
-   <section class="image mt-1 mb-3 float-{{ position }}">
+    <section class="row d-block">
+   <div class="image mt-1 mb-3  col-xs-12 col-sm-5 float-{{ position }} {{ height }}">
        {% set imgCredit = image.imageCredit ?? null %}
        {% set imgCaption =  image.imageCaption ?? null %}
        {% set imgBlockCaption =  block.caption ?? null %}
@@ -21,5 +23,6 @@
                </figcaption>
            {% endif %}
        </figure>
-   </section>
+   </div>
+    </section>
 {% endif %}
