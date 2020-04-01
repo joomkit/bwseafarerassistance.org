@@ -155,7 +155,7 @@ img.chat:hover {
   }
 
   .navbar-nav .list-group-item{
-    border-bottom: 1px solid #86a8d0bd;
+    border-bottom: 1px solid $white;
     border-right:none;
   }
   .navbar-nav .list-group-item a.nav-link{
@@ -218,7 +218,7 @@ img.chat:hover {
   .navbar-nav .list-group-item{
     border-bottom: 0px solid #86a8d0bd;
     border-left-width: 1px;
-    border-left:1px solid #86a8d0bd;
+    border-left:1px solid #eeeeee6e;//#86a8d0bd;
   }
 
   //end
