@@ -164,6 +164,10 @@ img.chat:hover {
   .navbar-nav .list-group-item.chat{
     background-color: $chat-bg-color;
   }
+  //R115 G190 B138
+  .navbar-nav .bg-primary{
+    //background-color: yellow!important;
+  }
   //end
 }
 @media(min-width:608px){
