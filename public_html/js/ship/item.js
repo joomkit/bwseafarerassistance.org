@@ -54,7 +54,7 @@ function initialise(){
         $('.mustache-item-downloads').html(html);
 
     });
-
+    preLoader();
 }
 
 

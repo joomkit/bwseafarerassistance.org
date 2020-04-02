@@ -53,7 +53,7 @@ function initialise(){
        // doSponsorship(data);
 
     });
-
+    preLoader();
 }
 
 function doSponsorship(data){

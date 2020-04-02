@@ -76,6 +76,14 @@ $('input[type="file"]').change(function(e){
     $('.custom-file-label').html(fileName);
 });
 
+function preLoader(){
+    // Preloader js
+    // $(window).on('load', function () {
+        $('.preloader').fadeOut(700);
+    // });
+
+}
+
 //id=companyLogo
 //$('#companyLogo').on('change',function(){
 //    //get the file name

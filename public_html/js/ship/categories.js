@@ -65,6 +65,8 @@ function initialise(){
 
     });
 
+    preLoader();
+
 }
 //{% endverbatim %}
 
