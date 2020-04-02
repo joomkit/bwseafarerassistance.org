@@ -55,11 +55,13 @@ return [
         'cache' => false,
         // Base site URL
         'siteUrl' => null,
+        'shipAPIdomain' => 'https://www.seafarerswelfare.org',
     ],
 
     // Production environment settings
     'production' => [
         // Base site URL
         'siteUrl' => null,
+        'shipAPIdomain' => 'https://www.seafarerswelfare.org',
     ],
 ];
