@@ -2,17 +2,15 @@
 <footer class="footer bg-secondary">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="footer-inner">
+            <div class="col-md-5">
+                <div class="footer-inner text-center text-md-left">
                     <h3>Contact</h3>
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled ">
                         <li><a href="tel:{{ organisationDetails.organisationTelephone }}">{{ organisationDetails.organisationTelephone }}</a></li>
                         <li><a
                                     href="mailto:{{ organisationDetails.organisationEmail }}">{{ organisationDetails.organisationEmail }}</a></li>
+                    <li>{{ organisationDetails.organisationAddress }}</li>
                     </ul>
-                    <p>
-                       {{ organisationDetails.organisationAddress }}
-                    </p>
                 </div>
             </div>
 {#            <div class="col-md-4">#}
@@ -30,13 +28,16 @@
 {#                    </div>#}
 {#                </div>#}
 {#            </div>#}
-            <div class="col-md-6 d-flex justify-content-center justify-content-md-end ">
+
+            <div class="col-md-7 d-flex justify-content-center justify-content-md-end ">
+
 
                 <ul class="list-inline">
-
-                    <li class="list-inline-item mr-5"><img class="" src="{{ baseUrl }}/assets/images/bwgroup.png"></li>
-                    <li class="list-inline-item"><img class="" src="{{ baseUrl }}/assets/images/hafina.png"></li>
+                    <li class="list-inline-item mr-3 mr-md-4"><img class="img-fluid" src="{{ baseUrl }}/assets/images/bwgroup.png"></li>
+                    <li class="list-inline-item"><img class="img-fluid" src="{{ baseUrl }}/assets/images/hafina.png"></li>
                 </ul>
+
+
                 <div class="footer-social hide">
                     <ul>
                         <li><a target="_blank" data-on="click" data-event-category="Social" data-event-action="Channel link" data-event-label="Facebook" href="{{ social.facebook }}"><img id="facebook" class="facebook svg" src="{{ baseUrl }}/assets/social/facebook-icon.svg" alt="" /></a></li>
@@ -47,12 +48,15 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-md-12 d-flex justify-content-center mt-5">
+                <p class="small text-center text-md-right">Although the helpline is for seafarers from the BW Group any seafarer can call</p>
+            </div>
         </div>
     </div>
     <div class="container ">
             <div class="row no-gutters border-top copyright pb-0">
                 <div class="col-sm-12 col-md-9 footer-inner">
-                    <div class="copyright-left">
+                    <div class="copyright-left ">
                         <p>{{ copyright.charityOrganisationStatement}} <br>Charity no.{{ copyright.charityNumber }} | Company no. {{ copyright.companyNumber }}</p>
                     </div>
                 </div>
